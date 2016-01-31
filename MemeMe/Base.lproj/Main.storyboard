@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -91,9 +92,7 @@
                             <constraint firstItem="XBB-F4-dr0" firstAttribute="trailing" secondItem="i3z-6x-CnC" secondAttribute="trailing" id="16O-Gj-Xm0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WMy-rS-HvD" secondAttribute="trailing" constant="-6" id="42a-EW-XzF"/>
                             <constraint firstItem="teL-Nq-7bD" firstAttribute="trailing" secondItem="WMy-rS-HvD" secondAttribute="trailing" id="BXl-zh-BYx"/>
-                            <constraint firstItem="i3z-6x-CnC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="El1-VO-2Mf">
-                                <variation key="widthClass=compact" symbolic="YES"/>
-                            </constraint>
+                            <constraint firstItem="i3z-6x-CnC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="El1-VO-2Mf"/>
                             <constraint firstItem="XBB-F4-dr0" firstAttribute="leading" secondItem="i3z-6x-CnC" secondAttribute="leading" id="FAN-Ez-Fcu"/>
                             <constraint firstItem="WMy-rS-HvD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="VIk-N7-nhM"/>
                             <constraint firstItem="teL-Nq-7bD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Vix-eb-5rI"/>
@@ -116,13 +115,6 @@
                                 <exclude reference="7js-LJ-Nx6"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="El1-VO-2Mf"/>
-                                <exclude reference="nBH-hE-mL4"/>
-                                <exclude reference="w3d-5t-PbR"/>
-                                <exclude reference="16O-Gj-Xm0"/>
-                                <exclude reference="FAN-Ez-Fcu"/>
-                                <exclude reference="Wvq-3E-Sxe"/>
-                                <exclude reference="mqp-NA-NFd"/>
                                 <exclude reference="42a-EW-XzF"/>
                                 <exclude reference="VIk-N7-nhM"/>
                                 <exclude reference="ber-g8-iLZ"/>
@@ -132,6 +124,13 @@
                                 <exclude reference="dvK-5l-njq"/>
                                 <exclude reference="xll-Dh-18k"/>
                                 <exclude reference="zlf-79-9be"/>
+                                <exclude reference="El1-VO-2Mf"/>
+                                <exclude reference="nBH-hE-mL4"/>
+                                <exclude reference="w3d-5t-PbR"/>
+                                <exclude reference="16O-Gj-Xm0"/>
+                                <exclude reference="FAN-Ez-Fcu"/>
+                                <exclude reference="Wvq-3E-Sxe"/>
+                                <exclude reference="mqp-NA-NFd"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -143,13 +142,6 @@
                                 <include reference="7js-LJ-Nx6"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="El1-VO-2Mf"/>
-                                <include reference="nBH-hE-mL4"/>
-                                <include reference="w3d-5t-PbR"/>
-                                <include reference="16O-Gj-Xm0"/>
-                                <include reference="FAN-Ez-Fcu"/>
-                                <include reference="Wvq-3E-Sxe"/>
-                                <include reference="mqp-NA-NFd"/>
                                 <include reference="42a-EW-XzF"/>
                                 <include reference="VIk-N7-nhM"/>
                                 <include reference="ber-g8-iLZ"/>
@@ -159,6 +151,13 @@
                                 <include reference="dvK-5l-njq"/>
                                 <include reference="xll-Dh-18k"/>
                                 <include reference="zlf-79-9be"/>
+                                <include reference="El1-VO-2Mf"/>
+                                <include reference="nBH-hE-mL4"/>
+                                <include reference="w3d-5t-PbR"/>
+                                <include reference="16O-Gj-Xm0"/>
+                                <include reference="FAN-Ez-Fcu"/>
+                                <include reference="Wvq-3E-Sxe"/>
+                                <include reference="mqp-NA-NFd"/>
                             </mask>
                         </variation>
                     </view>
