@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class MemeMeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     //Outlets
     @IBOutlet weak var navBar: UINavigationBar!
@@ -19,6 +19,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageViewer: UIImageView!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
+    
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     let memeTextFieldDelegate = MemeTextFieldDelegate()
     //default appearence of text fields (next version should allow for the changing of fonts and colors)
@@ -147,8 +149,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func saveMeme(memed_image: UIImage) {
         let meme = Meme(topText:topTextField.text!, bottomText: bottomTextField.text!, originalImage:imageViewer.image!, memedImage: memed_image)
+        let object = UIApplication.sharedApplication().delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
+        
+        self.dismissViewControllerAnimated(true, completion: nil)        
     }
     
+    @IBAction func cancelNewMeme(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
     func generateMemedImage()->UIImage{
         //hide navbar and toolbar
         navBar.hidden = true
