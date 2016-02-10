@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Sent Memes-->
@@ -33,6 +34,7 @@
                         <viewControllerLayoutGuide type="bottom" id="LR5-dK-yQv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MbD-qs-lTj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wkh-wq-Nwz">
@@ -43,12 +45,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0gy-Kd-NwS" id="yJX-zh-Rsi">
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cfm-vx-FLh">
+                                                    <rect key="frame" x="15" y="0.0" width="190" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="widthClass=compact">
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -97,7 +101,7 @@
                     <navigationItem key="navigationItem" title="Sent Memes" id="Lka-mE-te6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dwZ-bw-pLT">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorBarButtonItem="dwZ-bw-pLT" id="D0W-Xp-NPV">
+                                <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorBarButtonItem="dwZ-bw-pLT" id="eSV-oZ-8lH">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -144,7 +148,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SentMemeCollectionCell" id="xsb-Ca-arz" customClass="SentMemeCollectionCell" customModule="MemeMe" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="177" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="177" height="161"/>
@@ -197,7 +201,7 @@
                     <navigationItem key="navigationItem" title="Sent Memes" id="KcK-FR-jY5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GGz-1Y-i4Q">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorBarButtonItem="GGz-1Y-i4Q" id="z6V-hs-2oq">
+                                <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorBarButtonItem="GGz-1Y-i4Q" id="KNh-oa-erG">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -240,6 +244,7 @@
                         <viewControllerLayoutGuide type="bottom" id="DL4-qe-TJB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sP0-55-0Rp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Bn-As-HtT">
@@ -258,10 +263,10 @@
                                 <exclude reference="5Bn-As-HtT"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="gHU-a3-XAD"/>
                                 <exclude reference="Wcv-Zj-ge2"/>
                                 <exclude reference="Zgn-tf-ri3"/>
                                 <exclude reference="ub7-kP-azT"/>
-                                <exclude reference="gHU-a3-XAD"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -269,10 +274,10 @@
                                 <include reference="5Bn-As-HtT"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="gHU-a3-XAD"/>
                                 <include reference="Wcv-Zj-ge2"/>
                                 <include reference="Zgn-tf-ri3"/>
                                 <include reference="ub7-kP-azT"/>
-                                <include reference="gHU-a3-XAD"/>
                             </mask>
                         </variation>
                     </view>
@@ -284,10 +289,10 @@
             </objects>
             <point key="canvasLocation" x="586.5" y="681"/>
         </scene>
-        <!--Meme Me View Controller-->
+        <!--Meme Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MemeMeViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeEditorViewController" id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -344,11 +349,18 @@
                                                 <action selector="shareMeme:" destination="BYZ-38-t0r" id="NQz-9L-vP7"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="ddk-Pd-zhO">
-                                            <connections>
-                                                <action selector="cancelNewMeme:" destination="BYZ-38-t0r" id="RF9-Pb-1Lx"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem systemItem="cancel" id="ddk-Pd-zhO">
+                                                <connections>
+                                                    <action selector="cancelNewMeme:" destination="BYZ-38-t0r" id="RF9-Pb-1Lx"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="save" id="SZR-tF-khE">
+                                                <connections>
+                                                    <action selector="saveNewMeme:" destination="BYZ-38-t0r" id="iEq-HB-TTj"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -451,6 +463,7 @@
                         <outlet property="navBar" destination="i3z-6x-CnC" id="TuI-cx-hwy"/>
                         <outlet property="pickFromAlbumButton" destination="Tp2-8K-ZEW" id="Qii-sA-CDk"/>
                         <outlet property="pickFromCameraButton" destination="2YC-EW-83U" id="tjh-Xn-04B"/>
+                        <outlet property="saveButton" destination="SZR-tF-khE" id="0Pp-hR-8dj"/>
                         <outlet property="shareButton" destination="15J-1F-Z6q" id="ac9-W1-VeI"/>
                         <outlet property="toolbar" destination="7js-LJ-Nx6" id="zfr-5k-uCT"/>
                         <outlet property="topTextField" destination="WMy-rS-HvD" id="x91-eu-adP"/>
@@ -466,6 +479,6 @@
         <image name="Table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="D0W-Xp-NPV"/>
+        <segue reference="eSV-oZ-8lH"/>
     </inferredMetricsTieBreakers>
 </document>

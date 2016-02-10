@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemeMeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     //Outlets
     @IBOutlet weak var navBar: UINavigationBar!
@@ -21,6 +21,10 @@ class MemeMeViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var bottomTextField: UITextField!
     
     @IBOutlet weak var cancelButton: UIBarButtonItem!
+    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    var meme: Meme?
     
     let memeTextFieldDelegate = MemeTextFieldDelegate()
     //default appearence of text fields (next version should allow for the changing of fonts and colors)
@@ -42,8 +46,16 @@ class MemeMeViewController: UIViewController, UIImagePickerControllerDelegate, U
         topTextField.textAlignment = .Center
         bottomTextField.defaultTextAttributes = memeTextAttributes
         bottomTextField.textAlignment = .Center
-        bottomTextField.text = "BOTTOM"
-        topTextField.text = "TOP"
+        if (meme != nil) {
+            bottomTextField.text = meme?.bottomText
+            topTextField.text = meme?.topText
+            imageViewer.image = meme?.originalImage
+        }
+        else {
+            bottomTextField.text = "BOTTOM"
+            topTextField.text = "TOP"
+        }
+
         
         //set text field delegates
         self.topTextField.delegate = memeTextFieldDelegate
@@ -58,7 +70,7 @@ class MemeMeViewController: UIViewController, UIImagePickerControllerDelegate, U
         pickFromCameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         //disable share button until image is picked
         shareButton.enabled = (imageViewer.image != nil)
-        
+        saveButton.enabled = (imageViewer.image != nil)
         self.subscribeToKeyboardNotifications()
     }
     
@@ -154,6 +166,11 @@ class MemeMeViewController: UIViewController, UIImagePickerControllerDelegate, U
         appDelegate.memes.append(meme)
         
         self.dismissViewControllerAnimated(true, completion: nil)        
+    }
+    
+    @IBAction func saveNewMeme(sender: AnyObject) {
+        let memed_image = generateMemedImage()
+        saveMeme(memed_image)
     }
     
     @IBAction func cancelNewMeme(sender: AnyObject) {

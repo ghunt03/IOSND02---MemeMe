@@ -55,7 +55,6 @@ class SentMemeTableViewController: UIViewController, UITableViewDataSource, UITa
             let appDelegate = object as! AppDelegate
             appDelegate.memes.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            
         }
     }
     
