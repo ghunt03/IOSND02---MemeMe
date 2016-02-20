@@ -24,48 +24,57 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MemeMe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFg-d8-Sfl">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="34"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="37"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="128" y="90" width="144" height="40"/>
-                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hag-ZY-U9p">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Co1-2f-XnR">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 2.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hag-ZY-U9p">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="160" y="559" width="83" height="21"/>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QFg-d8-Sfl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="RsE-4Z-tRa"/>
-                            <constraint firstItem="QFg-d8-Sfl" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="pLZ-qF-dEI">
-                                <variation key="widthClass=compact" constant="-190"/>
-                            </constraint>
+                            <constraint firstItem="Co1-2f-XnR" firstAttribute="centerX" secondItem="QFg-d8-Sfl" secondAttribute="centerX" id="9bX-Ug-9vc"/>
+                            <constraint firstItem="QFg-d8-Sfl" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="69" id="GAd-c2-WQ1"/>
+                            <constraint firstItem="hag-ZY-U9p" firstAttribute="top" secondItem="Co1-2f-XnR" secondAttribute="bottom" constant="38" id="PQm-Fu-hto"/>
+                            <constraint firstItem="Co1-2f-XnR" firstAttribute="centerX" secondItem="hag-ZY-U9p" secondAttribute="centerX" id="YFM-Ul-s1P"/>
+                            <constraint firstItem="Co1-2f-XnR" firstAttribute="top" secondItem="QFg-d8-Sfl" secondAttribute="bottom" constant="29" id="j25-db-Lft"/>
+                            <constraint firstItem="QFg-d8-Sfl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="oRm-Ke-0aw"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="QFg-d8-Sfl"/>
+                                <exclude reference="Co1-2f-XnR"/>
                                 <exclude reference="hag-ZY-U9p"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="RsE-4Z-tRa"/>
-                                <exclude reference="pLZ-qF-dEI"/>
+                                <exclude reference="GAd-c2-WQ1"/>
+                                <exclude reference="oRm-Ke-0aw"/>
+                                <exclude reference="9bX-Ug-9vc"/>
+                                <exclude reference="YFM-Ul-s1P"/>
+                                <exclude reference="j25-db-Lft"/>
+                                <exclude reference="PQm-Fu-hto"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="QFg-d8-Sfl"/>
+                                <include reference="Co1-2f-XnR"/>
                                 <include reference="hag-ZY-U9p"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="RsE-4Z-tRa"/>
-                                <include reference="pLZ-qF-dEI"/>
+                                <include reference="GAd-c2-WQ1"/>
+                                <include reference="oRm-Ke-0aw"/>
+                                <include reference="9bX-Ug-9vc"/>
+                                <include reference="YFM-Ul-s1P"/>
+                                <include reference="j25-db-Lft"/>
+                                <include reference="PQm-Fu-hto"/>
                             </mask>
                         </variation>
                     </view>
@@ -75,4 +84,7 @@
             <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="120" height="120"/>
+    </resources>
 </document>

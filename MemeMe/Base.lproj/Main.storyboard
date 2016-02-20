@@ -247,7 +247,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Bn-As-HtT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Bn-As-HtT">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
                         </subviews>
@@ -402,11 +402,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="XBB-F4-dr0"/>
                                 <exclude reference="teL-Nq-7bD"/>
                                 <exclude reference="WMy-rS-HvD"/>
-                                <exclude reference="i3z-6x-CnC"/>
-                                <exclude reference="7js-LJ-Nx6"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="42a-EW-XzF"/>
@@ -429,11 +426,8 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="XBB-F4-dr0"/>
                                 <include reference="teL-Nq-7bD"/>
                                 <include reference="WMy-rS-HvD"/>
-                                <include reference="i3z-6x-CnC"/>
-                                <include reference="7js-LJ-Nx6"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="42a-EW-XzF"/>
