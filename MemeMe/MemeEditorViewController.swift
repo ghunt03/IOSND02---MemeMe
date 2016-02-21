@@ -182,8 +182,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         toolbar.hidden = true
         
         //capture image with no scaling
-        UIGraphicsBeginImageContextWithOptions(self.view.frame.size, false, 0.0)
-        view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 0.0)
+        view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
         let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         

@@ -28,7 +28,7 @@ class SentMemeCollectionViewController: UICollectionViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.collView.reloadData()
+        collView.reloadData()
         let space: CGFloat = 3.0
         let dimension = (view.frame.size.width - (2 * space)) / 3.0
         
@@ -39,13 +39,13 @@ class SentMemeCollectionViewController: UICollectionViewController {
     
     // MARK: Collection View Data Source
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.memes.count
+        return memes.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SentMemeCollectionCell", forIndexPath: indexPath) as! SentMemeCollectionCell
-        let meme = self.memes[indexPath.row]
+        let meme = memes[indexPath.row]
         
         // Set the image
         cell.memeImageView?.image = meme.memedImage
@@ -57,7 +57,7 @@ class SentMemeCollectionViewController: UICollectionViewController {
     {
         
         let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
-        detailController.meme = self.memes[indexPath.row]
+        detailController.meme = memes[indexPath.row]
         self.navigationController!.pushViewController(detailController, animated: true)
         
     }

@@ -299,7 +299,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Meme Editor" id="cfh-TL-r9I">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="3Q8-p8-w8Z"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="3Q8-p8-w8Z">
+                                            <connections>
+                                                <action selector="shareMeme:" destination="BYZ-38-t0r" id="Yhh-P7-9pO"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <rightBarButtonItems>
                                             <barButtonItem title="Cancel" id="Win-lN-2ux">
                                                 <connections>
@@ -352,7 +356,7 @@
                                     <constraint firstAttribute="width" constant="200" id="jTy-wv-g3k"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
