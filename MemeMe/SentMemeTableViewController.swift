@@ -21,8 +21,8 @@ class SentMemeTableViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
-        self.tblView.reloadData()
+        super.viewWillAppear(animated)
+        tblView.reloadData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
