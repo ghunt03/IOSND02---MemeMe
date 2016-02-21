@@ -58,8 +58,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 
         
         //set text field delegates
-        self.topTextField.delegate = memeTextFieldDelegate
-        self.bottomTextField.delegate = memeTextFieldDelegate
+        topTextField.delegate = memeTextFieldDelegate
+        bottomTextField.delegate = memeTextFieldDelegate
         
     }
 
@@ -71,12 +71,12 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         //disable share button until image is picked
         shareButton.enabled = (imageViewer.image != nil)
         saveButton.enabled = (imageViewer.image != nil)
-        self.subscribeToKeyboardNotifications()
+        subscribeToKeyboardNotifications()
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        self.unsubscribeFromKeyboardNotifications()
+        unsubscribeFromKeyboardNotifications()
     }
     
     func pickImage(imgSource: String) {
@@ -184,7 +184,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         //capture image with no scaling
         UIGraphicsBeginImageContextWithOptions(self.view.frame.size, false, 0.0)
-        self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
         let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         

@@ -31,10 +31,10 @@ class SentMemeTableViewController: UIViewController, UITableViewDataSource, UITa
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SentMemeTableCell")! as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("SentMemeTableCell")! as! SentMemeTableCell
         let meme = self.memes[indexPath.row]
-        cell.textLabel?.text = "\(meme.topText) \(meme.bottomText)"
-        cell.imageView?.image = meme.memedImage
+        cell.previewText.text = "\(meme.topText) \(meme.bottomText)"
+        cell.previewImage.image = meme.memedImage
         
         return cell
     }
